@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>register</title>
+<link rel="stylesheet" href="style1.css">
+
+
+
+</head>
+<body>
+	
+	
+	<div class="container">
+		<p>Enregistrement</p>
+
+		<form action="/sign_up" method="POST">
+			<div class="form first">
+
+				<div class="details personal">
+					<span class="title">Details Personels</span>
+
+					<div class="fields">
+						<div class="input-field">
+							<label>Nom</label>
+							<input type="text" name="nom" placeholder="Enter Your Name" required>
+						</div>
+
+						<div class="input-field">
+							<label>Prenom</label>
+							<input type="text" name="prenom" placeholder="Enter Your Name" required>
+						</div>
+
+						<div class="input-field">
+							<label>Email</label>
+							<input type="text" name="email" placeholder="Enter Your E-mail" required>
+						</div>
+
+						<div class="input-field">
+							<label>Numero Téléphone</label>
+							<input type="text" name="numero" placeholder="Enter Your Phone Number" required>
+						</div>
+
+						<div class="input-field">
+							<label>Genre</label>
+							<input type="text" name="genre" placeholder="Enter Your Gender" required>
+						</div>
+
+						<div class="input-field">
+							<label>Domaine</label>
+							<input type="text" name="domaine" placeholder="Enter Your Domain" required>
+						</div>
+						<div class="input-field">
+							<label>Université/Institut</label>
+							<input type="text" name="universite" placeholder="Enter Your University Name" required>
+						</div>
+						
+
+					</div>
+
+				</div>
+				<div class="details personal">
+					<p>Pièces à Fournir</p>
+
+					<div class="fields">
+						<div class="input-field">
+							<label>CV</label>
+		 					<input type="file" name="fichier" >
+						</div>
+					</div>
+				</div>
+	<input type="submit" value="Submit" id="submit" />
+
+				<!-- <div class="details personal">
+					<span class="title">Pièces à Fournir</span>
+
+					<div class="fields">
+						<div class="input-field">
+							<label>Nom</label>
+							<input type="text" placeholder="Enter Your Name" required>
+						</div>
+
+						<div class="input-field">
+							<label>Prenom</label>
+							<input type="text" placeholder="Enter Your Name" required>
+						</div>
+
+						<div class="input-field">
+							<label>Email</label>
+							<input type="text" placeholder="Enter Your E-mail" required>
+						</div> -->
+
+						
+				</div>
+
+
+			</div>
+
+
+			
+
+			</div>
+			
+		</form>
+	</div>
+	
+	<!-- <script>
+		const mongoose = require("mongoose");
+		const connect = mongoose.connect("mongodb://localhost:27017/register");
+
+		const Registerschema = new mongoose.Schema({
+			nom:{
+				type: String,
+				required: true
+			},
+			prenom:{
+				type: String,
+				required: true
+			},
+			email:{
+				type: String,
+				required: true
+			},
+			numero:{
+				type: String,
+				required: true
+			},
+			genre:{
+				type: String,
+				required: true
+			},
+			Domaine:{
+				type: String,
+				required: true
+			},
+			universite:{
+				type: String,
+				required: true
+			},
+		});
+
+		const collection = new mongoose.model("register_user", Registerschema);
+
+		module.exports = collection;
+
+		app.get("register", (req, res)=>{
+			res.render("Enregistrer");
+		});
+
+		app.post("register", async(req, res)=>{
+			const data = {
+				nom: req.body.nom,
+				prenom: req.body.prenom,
+				email: req.body.email,
+				numero: req.body.numero,
+				genre: req.body.genre,
+				domaine: req.body.domaine,
+				universite: req.body.universite
+			}
+
+			const userdata=await collection.insertMany(data);
+			console.log(userdata);
+		});
+	</script> -->
+
+</body>
+</html>

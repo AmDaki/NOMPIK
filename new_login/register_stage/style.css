@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Outfit:wght@100..900&display=swap');
+*{
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: ABeeZee;
+}
+body{
+	background-color: #f0f0f0;
+
+background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("images/logo.png");
+background-size: cover;
+background-attachment: fixed;
+background-position: center;
+height: 500px;
+width: auto;
+}
+.heading{
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 5px 10px rgba(0, 0, 0,.2);
+	font-size: 50px;
+	padding: 3px 5%;
+	;
+}
+.card-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 100px;
+
+}
+.card{
+	width: 325px;
+	background-color: #f0f0f0;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+	margin: 20px;
+}
+.card img{
+	width: 100%;
+	height: auto;
+}
+.card-content{
+	padding: 16px;
+}
+.card-content h3{
+	font-size: 28px;
+	margin-bottom: 8px;
+}
+.card-content p{
+	color: #666;
+	font-size: 15px;
+	line-height: 1.3;
+}
+.card-content .btn{
+	display: inline-block;
+	padding: 8px 16px;
+	background-color: #333;
+	text-decoration: none;
+	border-radius: 4px;
+	margin-top: 16px;
+	color: #fff;
+}
+
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  background: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+.logo{
+  position: relative;
+  height: 50%;
+  width: 200px;
+}
+.navigation a{
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navigation a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform  .5s;
+}
+.navigation a:hover::after{
+  transform: scaleX(1);
+}
+.navigation .btnlogin{
+  width: 130px;
+  height: 50px;
+  background: transparent ;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .5s;
+}
+.navigation .btnlogin:hover{
+  background: #fff;
+  color: #162938;
+}
+.formlogin{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 720px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background: #fff;
+  border: 2px solid #fff;
+  transform: translate(-50%, -100%);
+}
+.forlogin .closebtn{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #878484;
+  cursor: pointer;
+}
+.formlogin .form-box{
+  display: flex;
+}
+.form-box .form-details{
+  max-width: 330px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: url("imageslogin/login-img.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.form-box h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-box .formcontent{
+  width: 100%;
+  padding: 35px;
+}
+form .inputf{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+form .inputf input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 0.95rem;
+  border-radius: 3px;
+  border: 1px solid #717171;
+}
+.inputf input:focus{
+  border-color: #00bcd4;
+}
+.inputf input:is(:focus, :valid){
+  padding: 16px 15x 0;
+}
+form .inputf label{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  color: #717171;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+}
+.inputf input:is(:focus, :valid)~ label{
+  color: #00bcd4;
+  font-size: 0.75rem;
+  transform: translateY(-120%);
+}
+.form-box a{
+  color: #00bcd4;
+  text-decoration: none;
+}
+.form-box a:hover{
+  text-decoration: underline;
+}
+.form-box .forgotpass{
+  display: inline-flex;
+  margin-top: 14px;
+  font-size: 0.95rem;
+}
+form button{
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 0;
+  border-radius: 3px;
+  margin: 25px 0;
+  color: #fff;
+  cursor: pointer;
+  background: green;
+  transition: 0.2s ease;
+}
+form button:hover{
+  background: #0097a7;
+}
+.form-box .bottomli{
+  text-align: center;
+}
+.bluroverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  transition: 0.1s ease;
+}
+.show-popup .bluroverlay{
+  opacity: 1;
+  pointer-events: auto;
+}
+.show-popup .formlogin{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  transition: transform  0.3s ease, opacity 0.1s;
+}
+.formlogin .closebtn{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #878484;
+  cursor: pointer;
+}
+@media (max-width: 760px){
+  .formlogin{
+    width: 95%;
+  }
+  .form-box .form-details{
+    display: none;
+  }
+  .form-box .formcontent{
+    padding: 30px 20px;
+  }
+}
